@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script type = "text/JavaScript" src = " https://MomentJS.com/downloads/moment.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
@@ -29,16 +30,19 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
-      <script>
-        var moment = require('moment');
-        console.log(moment.format());
-
+      <script type = "text/JavaScript">
+         var a = moment().toString();
+         document.getElementById("currentDay").innerHTML = a;
       </script>
       
+      <!-- Timeblocks go here -->
+      
+      
+      
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   </body>
 </html>
