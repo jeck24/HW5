@@ -157,8 +157,21 @@
         var twentyVal = parseInt($('.20pmHour').text().substring(0,2));
         var twentyoneVal = parseInt($('.21pmHour').text().substring(0,2));
 
+        //9am conditional conditional
+        if (nineVal<actualHour){
+          $('.9amHour').addClass("past");
+          $('9amDescription').addClass("past");
+        }
 
+        else if (nineVal===actualHour){
+          $('.9amHour').addClass("present");
+          $('9amDescription').addClass("present");
+        }
 
+        else{
+          $('.9amHour').addClass("future");
+          $('9amDescription').addClass("future");
+        }
          
         console.log(actualHour);
         console.log(nineVal);
