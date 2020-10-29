@@ -366,15 +366,21 @@
           $('.21pmDescription').addClass("future");
         }
          
+        function change9amPlaceholder(){
+          var newPlaceholder = localStorage.getItem("9 AM");
+          console.log(newPlaceholder)
+          $(".9amDescription").attr("placeholder",newPlaceholder);
+        }
+
         $('.9amBtn').on("click",function(event){
           event.preventDefault();
           console.log("click");
 
           var schedule9am = $('.9amDescription').val();
 
-          console.log(schedule9am);
-
           localStorage.setItem("9 AM", schedule9am);
+
+          change9amPlaceholder();
 
         });
 
