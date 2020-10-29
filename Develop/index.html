@@ -109,17 +109,60 @@
         <button type="button" class="saveBtn btn-outline-primary 18pmBtn"><img src="https://icons.iconarchive.com/icons/icons8/windows-8/512/Programming-Save-icon.png" width=15px heigh=15px></button>
       </div>
 
+      <!--19PM-->
+      <div class="row input-group-sm 19pmRow">
+        <span class="hour input-group-text 19pmHour" id="inputGroup-sizing-sm" value=19>19 PM</span>
+        <input type="text" class="description form-control w-75 h-100 19pmDescription" placeholder="Input your tasks" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <button type="button" class="saveBtn btn-outline-primary 19pmBtn"><img src="https://icons.iconarchive.com/icons/icons8/windows-8/512/Programming-Save-icon.png" width=15px heigh=15px></button>
+      </div>
+
+      <!--20PM-->
+      <div class="row input-group-sm 20pmRow">
+        <span class="hour input-group-text 20pmHour" id="inputGroup-sizing-sm" value=20>20 PM</span>
+        <input type="text" class="description form-control w-75 h-100 20pmDescription" placeholder="Input your tasks" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <button type="button" class="saveBtn btn-outline-primary 20pmBtn"><img src="https://icons.iconarchive.com/icons/icons8/windows-8/512/Programming-Save-icon.png" width=15px heigh=15px></button>
+      </div>
+
+      <!--21PM-->
+      <div class="row input-group-sm 21pmRow">
+        <span class="hour input-group-text 21pmHour" id="inputGroup-sizing-sm" value=21>21 PM</span>
+        <input type="text" class="description form-control w-75 h-100 21pmDescription" placeholder="Input your tasks" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <button type="button" class="saveBtn btn-outline-primary 21pmBtn"><img src="https://icons.iconarchive.com/icons/icons8/windows-8/512/Programming-Save-icon.png" width=15px heigh=15px></button>
+      </div>
+
       <!--The script starts here-->
       <script type = "text/JavaScript">
 
         //Bringing the actual time value
-         var now = moment().toString();
-         $('#currentDay').append(now);
-         var actualHour = moment().hour();
+        var now = moment().toString();
 
-         console.log(actualHour);
+         //Appending all day to the header
+        $('#currentDay').append(now);
 
-         console.log($('.9amHour').text().substring(0,2));
+         //Bringing the actual hour of the day
+        var actualHour = moment().hour();
+
+         //Defining values for the times
+        var nineVal = parseInt($('.9amHour').text().substring(0,2));
+        var tenVal = parseInt($('.10amHour').text().substring(0,2));
+        var elevenVal = parseInt($('.11amHour').text().substring(0,2));
+        var twelveVal = parseInt($('.12pmHour').text().substring(0,2));
+        var thirdteenVal = parseInt($('.13pmHour').text().substring(0,2));
+        var fourteenVal = parseInt($('.14pmHour').text().substring(0,2));
+        var fifthteenVal = parseInt($('.15pmHour').text().substring(0,2));
+        var sixteenVal = parseInt($('.16pmHour').text().substring(0,2));
+        var seventeenVal = parseInt($('.17pmHour').text().substring(0,2));
+        var eighteenVal = parseInt($('.18pmHour').text().substring(0,2));
+        var nineteenVal = parseInt($('.19pmHour').text().substring(0,2));
+        var twentyVal = parseInt($('.20pmHour').text().substring(0,2));
+        var twentyoneVal = parseInt($('.21pmHour').text().substring(0,2));
+
+
+
+         
+        console.log(actualHour);
+        console.log(nineVal);
+
 
 
       </script>
