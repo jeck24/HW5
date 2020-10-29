@@ -366,22 +366,189 @@
           $('.21pmDescription').addClass("future");
         }
          
+        //here I will define all functions to change placeholder
+        //9 AM Placeholder change
         function change9amPlaceholder(){
           var newPlaceholder = localStorage.getItem("9 AM");
-          console.log(newPlaceholder)
           $(".9amDescription").attr("placeholder",newPlaceholder);
         }
 
+        //10 AM Placeholder change
+        function change10amPlaceholder(){
+          var newPlaceholder = localStorage.getItem("10 AM");
+          $(".10amDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //11 AM Placeholder change
+        function change11amPlaceholder(){
+          var newPlaceholder = localStorage.getItem("11 AM");
+          $(".11amDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //12 PM Placeholder change
+        function change12pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("12 PM");
+          $(".12pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //13 PM Placeholder change
+        function change13pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("13 PM");
+          $(".13pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //14 PM Placeholder change
+        function change14pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("14 PM");
+          $(".14pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //15 PM Placeholder change
+        function change15pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("15 PM");
+          $(".15pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //16 PM Placeholder change
+        function change16pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("16 PM");
+          $(".16pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //17 PM Placeholder change
+        function change17pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("17 PM");
+          $(".17pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //18 PM Placeholder change
+        function change18pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("18 PM");
+          $(".18pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //19 PM Placeholder change
+        function change19pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("19 PM");
+          $(".19pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //20 PM Placeholder change
+        function change20pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("20 PM");
+          $(".20pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //21 PM Placeholder change
+        function change21pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("21 PM");
+          $(".21pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //here I defined all of the functions for the clicks
+
+        //9 AM button function
         $('.9amBtn').on("click",function(event){
           event.preventDefault();
-          console.log("click");
-
           var schedule9am = $('.9amDescription').val();
-
           localStorage.setItem("9 AM", schedule9am);
-
           change9amPlaceholder();
+        });
 
+        //10 AM button function
+        $('.10amBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule10am = $('.10amDescription').val();
+          localStorage.setItem("10 AM", schedule10am);
+          change10amPlaceholder();
+        });
+
+        //11 AM button function
+        $('.11amBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule11am = $('.11amDescription').val();
+          localStorage.setItem("11 AM", schedule11am);
+          change11amPlaceholder();
+        });
+
+        //12 PM button function
+        $('.12pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule12pm = $('.12pmDescription').val();
+          localStorage.setItem("12 PM", schedule12pm);
+          change12pmPlaceholder();
+        });
+
+        //13 PM button function
+        $('.13pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule13pm = $('.13pmDescription').val();
+          localStorage.setItem("13 PM", schedule13pm);
+          change13pmPlaceholder();
+        });
+
+        //14 PM button function
+        $('.14pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule14pm = $('.14pmDescription').val();
+          localStorage.setItem("14 PM", schedule14pm);
+          change14pmPlaceholder();
+        });
+
+        //15 PM button function
+        $('.15pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule15pm = $('.15pmDescription').val();
+          localStorage.setItem("15 PM", schedule15pm);
+          change15pmPlaceholder();
+        });
+
+        //16 PM button function
+        $('.16pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule16pm = $('.16pmDescription').val();
+          localStorage.setItem("16 PM", schedule16pm);
+          change16pmPlaceholder();
+        });
+
+        //17 PM button function
+        $('.17pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule17pm = $('.17pmDescription').val();
+          localStorage.setItem("17 PM", schedule17pm);
+          change17pmPlaceholder();
+        });
+
+        //18 PM button function
+        $('.18pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule18pm = $('.18pmDescription').val();
+          localStorage.setItem("18 PM", schedule18pm);
+          change18pmPlaceholder();
+        });
+
+        //19 PM button function
+        $('.19pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule19pm = $('.19pmDescription').val();
+          localStorage.setItem("19 PM", schedule19pm);
+          change19pmPlaceholder();
+        });
+
+        //20 PM button function
+        $('.20pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule20pm = $('.20pmDescription').val();
+          localStorage.setItem("20 PM", schedule20pm);
+          change20pmPlaceholder();
+        });
+
+        //21 PM button function
+        $('.21pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule21pm = $('.21pmDescription').val();
+          localStorage.setItem("21 PM", schedule21pm);
+          change21pmPlaceholder();
         });
 
         change9amPlaceholder();
