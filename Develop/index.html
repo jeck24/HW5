@@ -153,29 +153,60 @@
         var sixteenVal = parseInt($('.16pmHour').text().substring(0,2));
         var seventeenVal = parseInt($('.17pmHour').text().substring(0,2));
         var eighteenVal = parseInt($('.18pmHour').text().substring(0,2));
-        var nineteenVal = parseInt($('.19pmHour').text().substring(0,2));
+        var nineteenVal = Math.floor(parseInt($('.19pmHour').text().substring(0,2)));
         var twentyVal = parseInt($('.20pmHour').text().substring(0,2));
         var twentyoneVal = parseInt($('.21pmHour').text().substring(0,2));
 
         //9am conditional conditional
         if (nineVal<actualHour){
           $('.9amHour').addClass("past");
-          $('9amDescription').addClass("past");
+          $('.9amDescription').addClass("past");
         }
 
         else if (nineVal===actualHour){
           $('.9amHour').addClass("present");
-          $('9amDescription').addClass("present");
+          $('.9amDescription').addClass("present");
         }
 
         else{
           $('.9amHour').addClass("future");
-          $('9amDescription').addClass("future");
+          $('.9amDescription').addClass("future");
+        }
+
+        //19pm conditional conditional
+        if (nineteenVal<actualHour){
+          $('.19pmHour').addClass("past");
+          $('.19pmDescription').addClass("past");
+        }
+
+        else if (nineteenVal===actualHour){
+          $('.19pmHour').addClass("present");
+          $('.19pmDescription').addClass("present");
+        }
+
+        else{
+          $('.19pmHour').addClass("future");
+          $('.19pmDescription').addClass("future");
+        }
+        
+        //21pm conditional conditional
+        if (twentyoneVal<actualHour){
+          $('.21pmHour').addClass("past");
+          $('.21pmDescription').addClass("past");
+        }
+
+        else if (twentyoneVal===actualHour){
+          $('.21pmHour').addClass("present");
+          $('.21pmDescription').addClass("present");
+        }
+
+        else{
+          $('.21pmHour').addClass("future");
+          $('.21pmDescription').addClass("future");
         }
          
-        console.log(actualHour);
-        console.log(nineVal);
 
+        console.log(nineteenVal===actualHour);
 
 
       </script>
