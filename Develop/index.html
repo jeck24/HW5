@@ -130,6 +130,13 @@
         <button type="button" class="saveBtn btn-outline-primary 21pmBtn"><img src="https://icons.iconarchive.com/icons/icons8/windows-8/512/Programming-Save-icon.png" width=15px heigh=15px></button>
       </div>
 
+      <!--22PM-->
+      <div class="row input-group-sm 22pmRow">
+        <span class="hour input-group-text 22pmHour" id="inputGroup-sizing-sm" value=22>22 PM</span>
+        <input type="text" class="description form-control w-75 h-100 22pmDescription" placeholder="Input your tasks" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <button type="button" class="saveBtn btn-outline-primary 22pmBtn"><img src="https://icons.iconarchive.com/icons/icons8/windows-8/512/Programming-Save-icon.png" width=15px heigh=15px></button>
+      </div>
+
       <!--The script starts here-->
       <script type = "text/JavaScript">
 
@@ -156,6 +163,7 @@
         var nineteenVal = Math.floor(parseInt($('.19pmHour').text().substring(0,2)));
         var twentyVal = parseInt($('.20pmHour').text().substring(0,2));
         var twentyoneVal = parseInt($('.21pmHour').text().substring(0,2));
+        var twentytwoVal = parseInt($('.22pmHour').text().substring(0,2));
 
         // Here we will give conditional formatting to all times
         //9am conditional formatting
@@ -365,6 +373,22 @@
           $('.21pmHour').addClass("future");
           $('.21pmDescription').addClass("future");
         }
+
+        //22pm conditional formatting
+        if (twentytwoVal<actualHour){
+          $('.22pmHour').addClass("past");
+          $('.22pmDescription').addClass("past");
+        }
+
+        else if (twentytwoVal===actualHour){
+          $('.22pmHour').addClass("present");
+          $('.22pmDescription').addClass("present");
+        }
+
+        else{
+          $('.22pmHour').addClass("future");
+          $('.22pmDescription').addClass("future");
+        }
          
         //here I will define all functions to change placeholder
         //9 AM Placeholder change
@@ -443,6 +467,12 @@
         function change21pmPlaceholder(){
           var newPlaceholder = localStorage.getItem("21 PM");
           $(".21pmDescription").attr("placeholder",newPlaceholder);
+        }
+
+        //22 PM Placeholder change
+        function change22pmPlaceholder(){
+          var newPlaceholder = localStorage.getItem("22 PM");
+          $(".22pmDescription").attr("placeholder",newPlaceholder);
         }
 
         //here I defined all of the functions for the clicks
@@ -551,6 +581,15 @@
           change21pmPlaceholder();
         });
 
+        //22 PM button function
+        $('.22pmBtn').on("click",function(event){
+          event.preventDefault();
+          var schedule22pm = $('.22pmDescription').val();
+          localStorage.setItem("22 PM", schedule22pm);
+          change22pmPlaceholder();
+        });
+
+        //calling the placeholder change function by default
         change9amPlaceholder();
         change10amPlaceholder();
         change11amPlaceholder();
@@ -564,8 +603,7 @@
         change19pmPlaceholder();
         change20pmPlaceholder();
         change21pmPlaceholder();
-
-
+        change22pmPlaceholder();
 
       </script>
       
