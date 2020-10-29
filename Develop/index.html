@@ -157,7 +157,8 @@
         var twentyVal = parseInt($('.20pmHour').text().substring(0,2));
         var twentyoneVal = parseInt($('.21pmHour').text().substring(0,2));
 
-        //9am conditional conditional
+        // Here we will give conditional formatting to all times
+        //9am conditional formatting
         if (nineVal<actualHour){
           $('.9amHour').addClass("past");
           $('.9amDescription').addClass("past");
@@ -173,7 +174,151 @@
           $('.9amDescription').addClass("future");
         }
 
-        //19pm conditional conditional
+        //10am conditional formatting
+        if (tenVal<actualHour){
+          $('.10amHour').addClass("past");
+          $('.10amDescription').addClass("past");
+        }
+
+        else if (tenVal===actualHour){
+          $('.10amHour').addClass("present");
+          $('.10amDescription').addClass("present");
+        }
+
+        else{
+          $('.10amHour').addClass("future");
+          $('.10amDescription').addClass("future");
+        }
+
+        //11am conditional formatting
+        if (elevenVal<actualHour){
+          $('.11amHour').addClass("past");
+          $('.11amDescription').addClass("past");
+        }
+
+        else if (elevenVal===actualHour){
+          $('.11amHour').addClass("present");
+          $('.11amDescription').addClass("present");
+        }
+
+        else{
+          $('.11amHour').addClass("future");
+          $('.11amDescription').addClass("future");
+        }
+
+        //12pm conditional formatting
+        if (twelveVal<actualHour){
+          $('.12pmHour').addClass("past");
+          $('.12pmDescription').addClass("past");
+        }
+
+        else if (twelveVal===actualHour){
+          $('.12pmHour').addClass("present");
+          $('.12pmDescription').addClass("present");
+        }
+
+        else{
+          $('.12pmHour').addClass("future");
+          $('.12pmDescription').addClass("future");
+        }
+
+        //13pm conditional formatting
+        if (thirdteenVal<actualHour){
+          $('.13pmHour').addClass("past");
+          $('.13pmDescription').addClass("past");
+        }
+
+        else if (thirdteenVal===actualHour){
+          $('.13pmHour').addClass("present");
+          $('.13pmDescription').addClass("present");
+        }
+
+        else{
+          $('.13pmHour').addClass("future");
+          $('.13pmDescription').addClass("future");
+        }
+
+        //14pm conditional formatting
+        if (fourteenVal<actualHour){
+          $('.14pmHour').addClass("past");
+          $('.14pmDescription').addClass("past");
+        }
+
+        else if (fourteenVal===actualHour){
+          $('.14pmHour').addClass("present");
+          $('.14pmDescription').addClass("present");
+        }
+
+        else{
+          $('.14pmHour').addClass("future");
+          $('.14pmDescription').addClass("future");
+        }
+
+        //15pm conditional formatting
+        if (fifthteenVal<actualHour){
+          $('.15pmHour').addClass("past");
+          $('.15pmDescription').addClass("past");
+        }
+
+        else if (fifthteenVal===actualHour){
+          $('.15pmHour').addClass("present");
+          $('.15pmDescription').addClass("present");
+        }
+
+        else{
+          $('.15pmHour').addClass("future");
+          $('.15pmDescription').addClass("future");
+        }
+
+        //16pm conditional formatting
+        if (sixteenVal<actualHour){
+          $('.16pmHour').addClass("past");
+          $('.16pmDescription').addClass("past");
+        }
+
+        else if (sixteenVal===actualHour){
+          $('.16pmHour').addClass("present");
+          $('.16pmDescription').addClass("present");
+        }
+
+        else{
+          $('.16pmHour').addClass("future");
+          $('.16pmDescription').addClass("future");
+        }
+
+        //17pm conditional formatting
+        if (seventeenVal<actualHour){
+          $('.17pmHour').addClass("past");
+          $('.17pmDescription').addClass("past");
+        }
+
+        else if (seventeenVal===actualHour){
+          $('.17pmHour').addClass("present");
+          $('.17pmDescription').addClass("present");
+        }
+
+        else{
+          $('.17pmHour').addClass("future");
+          $('.17pmDescription').addClass("future");
+        }
+
+        //18pm conditional formatting
+        if (eighteenVal<actualHour){
+          $('.18pmHour').addClass("past");
+          $('.18pmDescription').addClass("past");
+        }
+
+        else if (eighteenVal===actualHour){
+          $('.18pmHour').addClass("present");
+          $('.18pmDescription').addClass("present");
+        }
+
+        else{
+          $('.18pmHour').addClass("future");
+          $('.18pmDescription').addClass("future");
+        }
+
+        //19pm conditional formatting
         if (nineteenVal<actualHour){
           $('.19pmHour').addClass("past");
           $('.19pmDescription').addClass("past");
@@ -188,8 +333,24 @@
           $('.19pmHour').addClass("future");
           $('.19pmDescription').addClass("future");
         }
+
+        //20pm conditional formatting
+        if (twentyVal<actualHour){
+          $('.20pmHour').addClass("past");
+          $('.20pmDescription').addClass("past");
+        }
+
+        else if (twentyVal===actualHour){
+          $('.20pmHour').addClass("present");
+          $('.20pmDescription').addClass("present");
+        }
+
+        else{
+          $('.20pmHour').addClass("future");
+          $('.20pmDescription').addClass("future");
+        }
         
-        //21pm conditional conditional
+        //21pm conditional formatting
         if (twentyoneVal<actualHour){
           $('.21pmHour').addClass("past");
           $('.21pmDescription').addClass("past");
@@ -205,8 +366,6 @@
           $('.21pmDescription').addClass("future");
         }
          
-
-        console.log(nineteenVal===actualHour);
 
 
       </script>
